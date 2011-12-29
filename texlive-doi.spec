@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 You can hyperlink DOI numbers to dx.doi.org. However, some
@@ -27,27 +26,18 @@ This will either upset (La)TeX, or your PDF reader. This
 package contains a single user-level command \doi{}, which
 takes a DOI number, and creates a correct hyperlink from it.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/doi/doi.sty
 %doc %{_texmfdistdir}/doc/latex/doi/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,5 +48,3 @@ takes a DOI number, and creates a correct hyperlink from it.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
