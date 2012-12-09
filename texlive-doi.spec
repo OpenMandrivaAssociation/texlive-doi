@@ -48,3 +48,17 @@ takes a DOI number, and creates a correct hyperlink from it.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080818-2
++ Revision: 751010
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080818-1
++ Revision: 718246
+- texlive-doi
+- texlive-doi
+- texlive-doi
+- texlive-doi
+
