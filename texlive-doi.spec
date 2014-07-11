@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-doi
 Version:	20080818
-Release:	7
+Release:	8
 Summary:	Create correct hyperlinks for DOI numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/doi
