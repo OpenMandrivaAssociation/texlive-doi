@@ -1,6 +1,6 @@
 Name:		texlive-doi
 Version:	48634
-Release:	1
+Release:	2
 Summary:	Create correct hyperlinks for DOI numbers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/doi
