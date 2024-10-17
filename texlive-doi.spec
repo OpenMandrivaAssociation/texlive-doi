@@ -3,7 +3,7 @@ Version:	48634
 Release:	2
 Summary:	Create correct hyperlinks for DOI numbers
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/doi
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/doi
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/doi.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/doi.doc.r%{version}.tar.xz
